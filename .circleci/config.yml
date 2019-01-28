@@ -18,4 +18,15 @@ jobs:
 
     steps:
       - checkout
+  deploy:
+      - run:
+	  name: copy files to web server
+	  command: scp -i $ID_RSA -r personal-website/src/* $USR@$HOST:$WS_FOLDER/
+
+  workflows:
+    version: 2
+    build-and-deploy:
+      jobs:
+        - build
+        - deploy  
 
