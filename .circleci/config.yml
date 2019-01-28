@@ -6,7 +6,7 @@ version: 2
 jobs:
   deploy:
     machine:
-      - enable: "true"
+        enabled: true
     steps:
       - checkout
       - run:
