@@ -12,8 +12,8 @@ jobs:
       - run:
           name: "copy files to web server"
           command: |
-            if [ $CIRCLE_BRANCH == "master" ]; then DST=$WS_FOLDER; else DST=$WS_FOLDER/dev/; fi
-            scp -r src/* $USR@$HOST:$DST
+            if [ $CIRCLE_BRANCH == "master" ]; then DST=$WS_FOLDER/; else DST=$WS_FOLDER/dev/; fi
+            rsync -avh --progress src/* $USR@$HOST:$DST
           
 workflows:
   version: 2
