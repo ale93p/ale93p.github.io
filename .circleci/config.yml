@@ -5,10 +5,15 @@
 version: 2
 jobs:
   deploy:
-    docker:
-      - image: debian:stretch
+    branches:
+      only:
+        - master
+        - development
+    machine:
+      - enable: true
     steps:
       - checkout
+      
       - run:
           name: Export destination
           command: |
