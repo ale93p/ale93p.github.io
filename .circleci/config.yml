@@ -6,11 +6,11 @@ version: 2
 jobs:
   deploy:
     machine:
-      - enable: true
+      - enable: "true"
     steps:
       - checkout
       - run:
-          name: Export destination
+          name: "Export destination"
           command: |
             export DST=$(if [ $CIRCLE_BRANCH == "master" ]; then $WS_FOLDER; else "$WS_FOLDER/dev"; fi)
             echo $DST
