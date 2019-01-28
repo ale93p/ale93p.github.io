@@ -12,7 +12,7 @@ jobs:
       - run:
           name: Export destination
           command: |
-            export DST=if [$CIRCLE_BRANCH == "master"] then $WS_FOLDER else "$WS_FOLDER/dev" fi
+            export DST=if [ $CIRCLE_BRANCH == "master" ]; then $WS_FOLDER; else "$WS_FOLDER/dev"; fi
             echo $DST
       - run:
           name: "copy files to web server"
