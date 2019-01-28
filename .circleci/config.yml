@@ -10,11 +10,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "test"
-          command: "ls -l"
-      - run:
           name: "copy files to web server"
-          command: scp -r personal-website/src/* $USR@$HOST:$WS_FOLDER/
+          command: if [$CIRCLE_BRANCH=="master"] then 'scp -r src/* $USR@$HOST:$WS_FOLDER/' else 'scp -r src/* $USR@$HOST:$WS_FOLDER/dev/'
 
 workflows:
   version: 2
