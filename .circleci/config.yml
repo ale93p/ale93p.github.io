@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-  build:
+  deploy:
     branches:
       only:
         - master
@@ -24,9 +24,13 @@ jobs:
           command: |
             scp -r src/* $USR@$HOST:$DST
 
-# workflows:
-#   version: 2
-#   auto-deploy:
-#     jobs:
-#       - deploy  
+workflows:
+  version: 2
+  auto-deploy:
+    branches:
+      only:
+        - master
+        - development
+    jobs:
+      - deploy  
 
