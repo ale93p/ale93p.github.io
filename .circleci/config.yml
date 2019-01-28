@@ -15,9 +15,6 @@ jobs:
     machine:
       enabled: true
     steps:
-      - add_ssh_keys:
-        fingerprints:
-          - $ID_RSA
       - run:
           name: "copy files to web server"
           command: scp -r personal-website/src/* $USR@$HOST:$WS_FOLDER/
