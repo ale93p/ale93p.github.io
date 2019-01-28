@@ -6,21 +6,13 @@ version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
       - image: circleci/php:7.1-browsers
-      
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mysql:9.4
-
     working_directory: ~/repo
-
     steps:
       - checkout
   deploy:
       - run:
-          name: copy files to web server
+          name: "copy files to web server"
           command: scp -i $ID_RSA -r personal-website/src/* $USR@$HOST:$WS_FOLDER/
 
   workflows:
