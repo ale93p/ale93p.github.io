@@ -12,10 +12,9 @@ jobs:
       - run:
           name: "copy files to web server"
           command: |
-            export SCP_COM="scp -r src/* $USR@$HOST:$(if [ $CIRCLE_BRANCH == "master" ]; then "$WS_FOLDER/"; else "$WS_FOLDER/dev/"; fi)"
-            echo $SCP_COM
-            
-
+            if [ $CIRCLE_BRANCH == "master" ]; then DST=$WS_FOLDER; else DST=$WS_FOLDER/dev/; fi
+            scp -r src/* $USR@$HOST:$DST
+          
 workflows:
   version: 2
   auto-deploy:
