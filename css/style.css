@@ -1,6 +1,6 @@
 body{
     font-family: Lato, sans-serif;
-    padding-top: 60px;
+    padding-top: 100px;
 }
 a.nodeco{
     text-decoration: none !important;
@@ -37,6 +37,11 @@ h3.subsection{
 h4.subsubsection{
     font-size: 19px;
     color:  #24282c;
+}
+
+hr.my-4{
+    margin-top: 60px !important;
+    padding-bottom: 30px;
 }
 
 .navbar{
@@ -114,8 +119,8 @@ h4.subsubsection{
 .contact-container{
     display: flex;
     flex-direction: column;
-    align-items: left;  
-    justify-content: center;
+    align-items: flex-start;  
+    justify-content: flex-start;
     margin-top: 1rem;
 }
 
@@ -123,14 +128,14 @@ h4.subsubsection{
     display: flex;
     flex-direction: row;
     align-items: center;  
-    justify-content: center;
+    justify-content: flex-start;
     margin-bottom: 1rem;
 }
 .contact-container > .contact-row > .contact-sub-column{
     display: flex;
     flex-direction: column;
-    align-items: left;  
-    justify-content: center;
+    align-items: flex-start;  
+    justify-content: flex-start;
 }
 .fa-flexbox{
     padding-right: 1rem;
@@ -138,3 +143,6 @@ h4.subsubsection{
     color: rgba(34,110,147,1);
 }
 
+h2#bio {
+    padding-top: 65px;
+}
