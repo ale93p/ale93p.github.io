@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.1-browsers
-    working_directory: ~/repo
+    working_directory: ~/personal-website
     steps:
       - checkout
 
@@ -15,6 +15,9 @@ jobs:
     machine:
       enabled: true
     steps:
+      - run:
+          name: test ls
+          command: ls -l
       - run:
           name: "copy files to web server"
           command: scp -r personal-website/tree/master/src/* $USR@$HOST:$WS_FOLDER/
