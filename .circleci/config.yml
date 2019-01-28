@@ -10,10 +10,13 @@ jobs:
     steps:
       - checkout
       - run:
+        name: Export destination
+        command: |
+            export DST=if [$CIRCLE_BRANCH == "master"] then $WS_FOLDER else "$WS_FOLDER/dev" fi
+            echo $DST
+      - run:
           name: "copy files to web server"
           command: |
-            export DST=if [$CIRCLE_BRANCH=="master"] then $WS_FOLDER else "$WS_FOLDER/dev" fi
-            echo $DST
             scp -r src/* $USR@$HOST:$DST
 
 workflows:
