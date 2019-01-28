@@ -11,7 +11,10 @@ jobs:
       - checkout
       - run:
           name: "copy files to web server"
-          command: if [$CIRCLE_BRANCH=="master"] then 'scp -r src/* $USR@$HOST:$WS_FOLDER/' else 'scp -r src/* $USR@$HOST:$WS_FOLDER/dev/' fi
+          command: |
+            export DST=if [$CIRCLE_BRANCH=="master"] then $WS_FOLDER else "$WS_FOLDER/dev" fi
+            echo $DST
+            scp -r src/* $USR@$HOST:$DST
 
 workflows:
   version: 2
