@@ -10,9 +10,11 @@ jobs:
     steps:
       - checkout
       - run:
+          name: "test"
+          command: "ls -l"
+      - run:
           name: "copy files to web server"
-          branch: master
-          command: scp -r personal-website/tree/master/src/* $USR@$HOST:$WS_FOLDER/
+          command: scp -r personal-website/src/* $USR@$HOST:$WS_FOLDER/
 
 workflows:
   version: 2
