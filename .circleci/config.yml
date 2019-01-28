@@ -12,6 +12,8 @@ jobs:
       - checkout
 
   deploy:
+    machine:
+      enabled: true
     steps:
       - run:
         name: "copy files to web server"
