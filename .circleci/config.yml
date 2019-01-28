@@ -9,7 +9,6 @@ jobs:
       - enable: true
     steps:
       - checkout
-      
       - run:
           name: Export destination
           command: |
@@ -25,10 +24,10 @@ workflows:
   auto-deploy:
     jobs:
       - deploy:
-        filters:
-          branches:
-            only:
-              - master
-              - development
+          filters:
+            branches:
+              only:
+                - master
+                - development
         
 
