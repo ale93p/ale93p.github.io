@@ -24,10 +24,11 @@ workflows:
   version: 2
   auto-deploy:
     jobs:
-      - deploy  
+      - deploy:
         filters:
-              branches:
-                only:
-                  - master
-                  - development
+          branches:
+            only:
+              - master
+              - development
+        
 
