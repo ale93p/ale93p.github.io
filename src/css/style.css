@@ -146,3 +146,31 @@ hr.my-4{
 h2#bio {
     padding-top: 65px;
 }
+
+
+.project-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  
+    justify-content: flex-start;
+    margin-top: 1rem;
+}
+
+.project-container > .project-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;  
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+.project-container > .project-row > .project-sub-column{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  
+    justify-content: flex-start;
+    margin-left: 2rem;
+}
+
+.project-logo{
+    height: 8rem;
+}
