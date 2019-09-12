@@ -49,6 +49,14 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#teaching">Teaching</a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#namb">NAMB</a>
+                            </div>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact">Contact</a>
                         </li>
@@ -72,7 +80,8 @@
                     <div class="fab-wrapper">
                         <a href="mailto:alessio.pagliari@unice.fr" class="nodeco"><i class="fas fa-at fa-2x fa-flexbox"></i></a>
                         <a href="https://www.linkedin.com/in/alessiopagliari" target="_blank" class="nodeco"><i class="fab fa-linkedin-in fa-2x fa-flexbox"></i></a>
-                        <a href="https://www.twitter.com/ale93p" target="_blank" class="nodeco"><i class="fab fa-twitter fa-2x fa-flexbox"></i></a>
+                        <!--<a href="https://www.twitter.com/ale93p" target="_blank" class="nodeco"><i class="fab fa-twitter fa-2x fa-flexbox"></i></a>-->
+                        <a href="https://www.github.com/ale93p" target="_blank" class="nodeco"><i class="fab fa-github fa-2x fa-flexbox"></i></a>
                         <!--<i class="fab fa-instagram fa-2x fa-flexbox"></i>-->
                     </div>
                 </div>
@@ -118,7 +127,9 @@
             <p class="text-justify">
                 <h4 class="subsubsection">Conference Papers:</h4>
                 <ul>
-                    <li>Alessio Pagliari, Fabrice Huet, Guillaume Urvoy-Keller "<b>On the cost of reliability in Data Stream Processing Systems</b>", <i>IEEE/ACM CCGrid</i>, 2019 
+                    <li>
+                            <a href="https://hal.archives-ouvertes.fr/hal-02134654" target="_blank"><i class="far fa-file-pdf"></i></a>
+                        Alessio Pagliari, Fabrice Huet, Guillaume Urvoy-Keller "<b>On the cost of reliability in Data Stream Processing Systems</b>", <i>IEEE/ACM CCGrid</i>, 2019 
                         <br/>[<i>15% acceptance ratio on first round</i>]
                     </li>
                 </ul>
@@ -149,6 +160,12 @@
             <p class="text-justify">
                 at Université Nice Sophia Antipolis, UFR Science<sup><a href="http://unice.fr/faculte-des-sciences/lufr-sciences" target="_blank"><i class="fas fa-external-link-alt fa-xs"></i></a></sup>: charge of teaching as part of the PhD contract (DCCE): 64 hours per year.
             </p>
+            <h4 class="subsubsection">A.Y. 2019/2020:</h4>
+            <ul>
+                <li>Outils pour Ingegnerie Logicielle<sup><a href="https://github.com/fabricehuet/GIT_TP" target="_blank"><i class="fas fa-external-link-alt fa-xs"></i></a></sup> (Git, Maven, JUnit), Master 1, TD<sup>2</sup></li>
+                <li>Parallelism<sup><a href="https://sites.google.com/site/fabricehuet/teaching/parallelism" target="_blank"><i class="fas fa-external-link-alt fa-xs"></i></a></sup> (C/OpenMP), Master 1, TD<sup>2</sup></li>
+                <li>Algorithmique et Programmation avec R<sup><a href="http://www.i3s.unice.fr/~malapert/R/" target="_blank"><i class="fas fa-external-link-alt fa-xs"></i></a></sup>, Licence 2, TP<sup>1</sup></li>
+            </ul>
             <h4 class="subsubsection">A.Y. 2018/2019:</h4>
             <ul>
                 <li>Parallelism<sup><a href="https://sites.google.com/site/fabricehuet/teaching/parallelism" target="_blank"><i class="fas fa-external-link-alt fa-xs"></i></a></sup> (C/OpenMP), Master 1, TD<sup>2</sup></li>
@@ -164,6 +181,30 @@
                 <sup>1</sup><i>Travaux Pratiques</i><br/>
                 <sup>2</sup><i>Travaux Dirigés</i><br/>
             </p>
+
+
+            <span display="none" id="projects"></span>
+            <hr class="my-4">
+            <h2>Projects</h2>
+            <span display="none" id="namb"></span>
+            <div class="project-container">
+                <span class="project-row">
+                    <img class="project-logo" src="img/namb_logo.png" id="i3s" alt="i3s logo">
+                
+                    <span class="project-sub-column">
+                        <h3 class="subsection">
+                            NAMB &nbsp
+                            <a href="https://www.github.com/ale93p/namb" target="_blank" class="nodeco"><i class="fab fa-github"></i></a>
+                        </h3>
+                        <span>
+                        <b>NAMB</b> (<b>N</b>ot only <b>A</b> <b>M</b>icro-<b>B</b>enchmark) is a parametrizable and automatically generated benchmark application for Data Stream Processing Systems (DSP).
+                        </span>
+                    </span>
+                </span>
+            </div>
+            <br/> 
+
+
             
             <span display="none" id="contact"></span>
             <hr class="my-4">
